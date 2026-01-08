@@ -1,6 +1,6 @@
-# Holberton School Simple Shell
+Simple Shell
+Description
+Simple Shell is a simple UNIX command line interpreter written in C. It replicates basic functionalities of the standard shell (/bin/sh).
 
-## Description
-This project implements a simple UNIX command line interpreter (shell) that can execute simple commands with no arguments.
-
-## Usage
+Usage
+Compile the program using

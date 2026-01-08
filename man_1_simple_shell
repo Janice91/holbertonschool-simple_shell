@@ -1,8 +1,16 @@
-.TH simple_shell 1 "January 2026"
+.TH SIMPLE_SHELL 1
 .SH NAME
-simple_shell \- a simple UNIX command line interpreter
-.SH SYNOPSIS
-simple_shell
-.SH DESCRIPTION
-A simple shell that reads commands from the user, executes them, and displays a prompt. Supports only single-word commands. Handles errors and Ctrl+D (EOF).
+simple_shell \- a simple UNIX command interpreter
 
+.SH SYNOPSIS
+./hsh
+
+.SH DESCRIPTION
+Simple Shell is a basic command line interpreter that executes commands
+entered by the user.
+
+.SH USAGE
+The shell works in interactive and non-interactive modes.
+
+.SH AUTHOR
+JANICE KOUAKOU
