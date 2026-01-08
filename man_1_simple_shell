@@ -1,0 +1,9 @@
+.TH simple_shell 1 "Jan 2026"
+.SH NAME
+simple_shell \- simple Unix command interpreter
+.SH SYNOPSIS
+./hsh
+.SH DESCRIPTION
+simple_shell is a simple command line interpreter.
+.SH AUTHORS
+Janice91
