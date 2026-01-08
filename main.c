@@ -1,10 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 #include "shell.h"
 
 /**
- * main - entry point for the simple shell
+ * main - simple shell loop
  * Return: 0 on success
  */
 int main(void)
@@ -15,19 +12,22 @@ int main(void)
 
     while (1)
     {
+        /* Affiche le prompt */
         if (isatty(STDIN_FILENO))
-            printf("($) ");
+            write(1, "($) ", 4);
 
         nread = getline(&line, &len, stdin);
-        if (nread == -1)
+        if (nread == -1) /* EOF (Ctrl+D) */
         {
-            printf("\n");
+            write(1, "\n", 1);
             break;
         }
 
+        /* Supprime le '\n' final */
         if (line[nread - 1] == '\n')
             line[nread - 1] = '\0';
 
+        /* Ignore les lignes vides */
         if (line[0] == '\0')
             continue;
 

@@ -1,10 +1,6 @@
-# Holberton Simple Shell
-
-## Compilation
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
-
-## Usage
-./hsh
+# Holberton School Simple Shell
 
 ## Description
-A simple shell that mimics basic features of /bin/sh.
+This project implements a simple UNIX command line interpreter (shell) that can execute simple commands with no arguments.
+
+## Usage

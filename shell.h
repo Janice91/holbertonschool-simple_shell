@@ -5,11 +5,12 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
-#include <sys/types.h>
-#include <sys/wait.h>
 
+/* Environnement global */
 extern char **environ;
 
-int _strcmp(char *s1, char *s2);
+/* Prototype */
+void execute_command(char *line);
 
-#endif /* SHELL_H */
+#endif
+
