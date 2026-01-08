@@ -1,36 +1,25 @@
 #include "shell.h"
 
-/**
- * main - simple shell loop
- * Return: 0 on success
- */
-int main(void)
+int main(int ac, char **av)
 {
     char *line = NULL;
     size_t len = 0;
+    int line_count = 0;
     ssize_t nread;
+
+    (void)ac;
 
     while (1)
     {
-        /* Affiche le prompt */
-        if (isatty(STDIN_FILENO))
-            write(1, "($) ", 4);
-
+        line_count++;
+        write(STDOUT_FILENO, "$ ", 2);
         nread = getline(&line, &len, stdin);
-        if (nread == -1) /* EOF (Ctrl+D) */
+        if (nread == -1)
         {
-            write(1, "\n", 1);
+            write(STDOUT_FILENO, "\n", 1);
             break;
         }
-
-        /* Supprime le '\n' final */
-        if (line[nread - 1] == '\n')
-            line[nread - 1] = '\0';
-
-        /* Ignore les lignes vides */
-        if (line[0] == '\0')
-            continue;
-
+        line[nread - 1] = '\0';
         execute_command(line);
     }
 
